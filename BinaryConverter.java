@@ -57,12 +57,8 @@ public class BinaryConverter {
             break;
         }
         switch (option) {
-            case 1:
-                one(sc);
-                break;
-            case 2:
-                two(sc);
-                break;
+            case 1 -> one(sc);
+            case 2 -> two(sc);
         }
     }
 }
