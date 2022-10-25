@@ -7,10 +7,10 @@ import java.io.IOException;
 import java.util.Scanner;
 import java.io.BufferedInputStream;
 import java.io.FileInputStream;
-import java.lang.Thread;
+// import java.lang.Thread;
 
 public class BinaryReader {
-    public static void main(String [] args) throws IOException, InterruptedException {
+    public static void main(String [] args) throws IOException /*, InterruptedException */ {
         Scanner sc = new Scanner(System.in);
         BinaryNumber binNum = new BinaryNumber();
         System.out.print("Input file path: ");
@@ -27,7 +27,7 @@ public class BinaryReader {
             if (numPrints++ % 10 == 0) {
                 System.out.print("\n");
             }
-            Thread.sleep(1000);
+            // Thread.sleep(1000);
             binNum.setNumber(i);
             System.out.print(binNum + " ");
         }
