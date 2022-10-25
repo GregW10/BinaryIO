@@ -20,7 +20,7 @@ public class BinaryConverter {
             break;
         }
         BinaryNumber binNum = new BinaryNumber(num);
-        System.out.println("In binary the number is: " + binNum);
+        System.out.println("In binary, the number is: " + binNum);
     }
     private static void two(Scanner sc) throws BinaryFormatException {
         System.out.print("Please enter a binary number: ");

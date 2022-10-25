@@ -4,7 +4,7 @@
 
 import java.lang.StringBuilder;
 
-public class BinaryNumber {
+public class BinaryNumber extends Number {
     private long num;
     private String binaryNumber;
     private void setBinaryString() {
@@ -54,14 +54,17 @@ public class BinaryNumber {
         num = Number;
     }
     BinaryNumber() {
+        super();
         num = 0;
         setBinaryString();
     }
     BinaryNumber(long Number) {
+        super();
         num = Number;
         setBinaryString();
     }
     BinaryNumber(String binaryNumberString) throws BinaryFormatException {
+        super();
         char c;
         long num_count = 0;
         for (int i = 0; i < binaryNumberString.length(); ++i) {
@@ -87,6 +90,30 @@ public class BinaryNumber {
     }
     public long getNumber() {
         return num;
+    }
+    @Override
+    public byte byteValue() {
+        return (byte) num;
+    }
+    @Override
+    public short shortValue() {
+        return (short) num;
+    }
+    @Override
+    public int intValue() {
+        return (int) num;
+    }
+    @Override
+    public long longValue() {
+        return num;
+    }
+    @Override
+    public float floatValue() {
+        return (float) num;
+    }
+    @Override
+    public double doubleValue() {
+        return (double) num;
     }
     @Override public String toString() {
         return binaryNumber;

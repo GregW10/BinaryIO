@@ -10,13 +10,12 @@ import java.io.IOException;
 public class BinaryWriter {
     public static void main(String [] args) throws BinaryFormatException, IOException {
         Scanner sc = new Scanner(System.in);
-        BinaryNumber binNum;
         System.out.print("Please enter file path to write: ");
         BufferedOutputStream out;
         try {
             out = new BufferedOutputStream(new FileOutputStream(sc.next()));
         } catch (IOException e) {
-            System.out.println("An error occured: " + e);
+            System.out.println("An error occurred: " + e);
             return;
         }
         System.out.println("Start writing (any invalid character causes termination): ");
